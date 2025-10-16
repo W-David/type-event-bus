@@ -1,5 +1,7 @@
 # type-event-bus
 
+> [English](README.md) | [简体中文](README_zh.md)
+
 A lightweight, type-safe event bus library for TypeScript, leveraging ES6 Proxy for dynamic event management with complete type checking.
 
 ## Features
@@ -67,18 +69,23 @@ Creates a new typed event bus instance with events defined in the provided type.
 ### EventEmitter Methods
 
 #### `on(fn: Fn<T>)`
+
 Registers a new listener function for the event.
 
 #### `once(fn: Fn<T>)`
+
 Registers a listener that will be invoked only once, then automatically removed.
 
 #### `emit(...p: T)`
+
 Emits the event with the provided arguments, triggering all registered listeners.
 
 #### `off(fn?: Fn<T>)`
+
 Removes a specific listener. If no listener is provided, removes all listeners for this event.
 
 #### `offAll()`
+
 Removes all listeners for the event.
 
 ## License
