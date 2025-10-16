@@ -1,0 +1,15 @@
+{
+  "include": ["src/**/*", "test/**/*"],
+  "exclude": ["dist"],
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "strict": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "outDir": "./dist"
+  }
+}

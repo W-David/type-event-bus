@@ -1,0 +1,57 @@
+{
+  "name": "type-event-bus",
+  "version": "1.0.0",
+  "author": "W-David <1776867536@qq.com>",
+  "license": "MIT",
+  "description": "A lightweight, type-safe event bus library for TypeScript, leveraging ES6 Proxy for dynamic event management with complete type checking.",
+  "homepage": "https://github.com/W-David/type-event-bus",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/W-David/type-event-bus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/W-David/type-event-bus/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "jest",
+    "build": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "prepublishOnly": "npm run test && npm run build",
+    "release": "npm publish --access public"
+  },
+  "keywords": [
+    "typescript",
+    "eventbus",
+    "proxy",
+    "typed",
+    "event",
+    "bus",
+    "typesafe"
+  ],
+  "packageManager": "pnpm@10.10.0",
+  "devDependencies": {
+    "@jest/globals": "^30.2.0",
+    "@rollup/plugin-typescript": "^12.1.4",
+    "jest": "^30.2.0",
+    "rollup": "^4.52.4",
+    "rollup-plugin-delete": "^3.0.1",
+    "ts-jest": "^29.4.5",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {}
+}
